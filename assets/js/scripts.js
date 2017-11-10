@@ -337,13 +337,18 @@
     pushButton.textContent = 'Push Not Supported';
     }
    
-        
-        
+      
         
     });
     
 })(jQuery);
 
+  Notification.requestPermission(function(status) {
+    console.log('Notification permission status:', status);
+      alert("pusg");
+});
+        
+        
 
 
 	

@@ -1,0 +1,22 @@
+{
+    "name": "RoyalIndia",
+    "short_name": "Royal",
+    "start_url": "/index.html",
+    "icons":[{
+        "src": "assets/img/royallogo.png",
+        "size": "128*128",
+        "type":"image/png"
+    },
+             {
+         "src": "assets/img/royallogo.png",
+        "size": "144*144",
+        "type":"image/png"  
+             }
+    ],
+    
+    "background_color":"#3E4EB8",
+    "theme_color":"#2F3B2A",
+    "display":"standalone"
+    
+}
+
