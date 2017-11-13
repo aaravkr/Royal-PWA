@@ -14,8 +14,6 @@ $(document).ready(function(){
 var FIREBASE_AUTH = firebase.auth();
 var FIREBASE_MESSAGING = firebase.messaging();
 var FIREBASE_DATABASE = firebase.database();
-
-    
     
   var signinbutton = document.getElementById("sign-in");
     var signoutbutton = document.getElementById("sign-out");
@@ -31,8 +29,6 @@ var FIREBASE_DATABASE = firebase.database();
     signoutbutton.addEventListener('click',SignOut);
    subscribtion.addEventListener('click',SubscribeToNotification);
     FIREBASE_AUTH.onAuthStateChanged(handleonauthchanged);
-    
-    
     
      /*=========
     
@@ -73,8 +69,7 @@ else{
             uid:FIREBASE_AUTH.currentUser.uid
         });
       
-      })
-          
+      })   
       
       .catch(()=>console.log("user didn't give permission: "));
         
