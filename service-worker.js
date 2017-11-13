@@ -1,5 +1,5 @@
 'use strict';
-var cacheName = 'royalPWA-3';
+var cacheName = 'royalPWA';
 var cacheItems = [
      '/index.html',
      '/assets/img/icons/breakfast_01.png',
@@ -56,8 +56,6 @@ self.addEventListener('activate', function(e) {
       }));
     })
   );
- 
-    
 });
 
 self.addEventListener('fetch', function(e) {
