@@ -324,7 +324,7 @@
      //serviceworker starts
     if ('serviceWorker' in navigator && 'PushManager' in window) {
       console.log('Service Worker and Push is supported');
-      navigator.serviceWorker.register('service-worker.js')
+      navigator.serviceWorker.register('service-worjs')
       .then(function(swReg) {
         console.log('Service Worker is registered', swReg);
         swRegistration = swReg;
@@ -343,11 +343,7 @@
     
 })(jQuery);
 
-  Notification.requestPermission(function(status) {
-    console.log('Notification permission status:', status);
-      alert("pusg");
-});
-        
+  
         
 
 

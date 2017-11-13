@@ -1,5 +1,5 @@
 'use strict';
-var cacheName = 'royalPWA-2';
+var cacheName = 'royalPWA-3';
 var cacheItems = [
      '/index.html',
      '/assets/img/icons/breakfast_01.png',
@@ -9,7 +9,7 @@ var cacheItems = [
      '/assets/img/icons/drinks_01.png',
      '/assets/img/icons/drinks_02.png',
      '/assets/img/icons/lunch_01.png',
-     '/assets/img/icons/lunch_02.png',
+    
      '/assets/img/abt-img1.jpg',
      '/assets/img/abt-img2.jpg',
      '/assets/img/absm-1.jpg',
