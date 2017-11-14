@@ -11,33 +11,31 @@ $(document).ready(function() {
   };
   firebase.initializeApp(config);
 
-var FIREBASE_AUTH = firebase.auth();
-var FIREBASE_MESSAGING = firebase.messaging();
-var FIREBASE_DATABASE = firebase.database();
+const FIREBASE_AUTH = firebase.auth();
+const FIREBASE_MESSAGING = firebase.messaging();
+const FIREBASE_DATABASE = firebase.database();
 
-var signInButton = document.getElementById("sign-in");
-var signOutButton = document.getElementById("sign-out");
-var subscribeButton = document.getElementById("subscribe");
-    
-    
+const signInButton = document.getElementById("sign-in");
+const signOutButton = document.getElementById("sign-out");
+const subscribeButton = document.getElementById("subscribe");
+const sendNotificationForm = document.getElementById("send-notification-form");
+
     /*=========
-    
     event Listener
-    
     ==========*/
+
     signInButton.addEventListener('click', signIn);
     signOutButton.addEventListener('click', signOut);
     subscribeButton.addEventListener('click', subscribeToNotifications);
+    sendNotificationForm.addEventListener('click', sendNotification);
+
     FIREBASE_AUTH.onAuthStateChanged(handleAuthStateChanged);
     FIREBASE_MESSAGING.onTokenRefresh(handleTokenRefresh);
     
      /*=========
-    
     functions
-    
     ==========*/
-    
-    
+
     function signIn() {
       FIREBASE_AUTH.signInWithPopup(new firebase.auth.GoogleAuthProvider()); 
     }
@@ -86,6 +84,18 @@ var subscribeButton = document.getElementById("subscribe");
                     subscribeButton.removeAttribute("hidden");
                 }
             })
+    }
+    
+    function sendNotification(e) {
+        e.preventDefault();
+        const notificationMessage = document.getElementById("notification-message").value;
+        FIREBASE_DATABASE.ref('/notifications').push({
+            user: FIREBASE_AUTH.currentUser.displayName,
+            message: notificationMessage,
+            userProfileImg: FIREBASE_AUTH.currentUser.photoURL
+        }).then(() => {
+            document.getElementById("notification-message").value = "";
+        })
     }
     
 });
