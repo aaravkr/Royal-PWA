@@ -15,6 +15,20 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
+
+.flex-vertical{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+
+.section-carousel .dish-carousel-inner p{
+    color: white;
+}
+
 .ls5{
     letter-spacing: 5px;
 }
@@ -330,6 +344,10 @@ dl dd {
 }
 .mr-0 {
     margin-right: 0;
+}
+
+.mr-20 {
+    margin-right: 20;
 }
 /** Margin-top classes **/
 
@@ -766,6 +784,10 @@ dl dd {
 .golden {
     color: #d4af37;
 }
+.darkred{
+    color: 	#8B0000;
+}
+
 .bg-light {
     background: #fff;
 }
@@ -915,7 +937,7 @@ color
 .btn-accent:focus,
 .btn-accent:active {
     text-decoration: none;
-    background: #b29126;
+    background: #8B0000;
 }
 /* -------------------------------------
  * buttons
@@ -2604,7 +2626,7 @@ Carousel
 =====*/
 
 .section-carousel {
-    background: url(../img/coffee-4.jpg) no-repeat;
+    background: url(../img/test-bg-1.jpg) no-repeat;
     background-size: cover;
     padding: 114px 0 114px;
 }

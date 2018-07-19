@@ -32,8 +32,8 @@
               paginationSpeed : 1000,
               singleItem:true,
               autoPlay:true,
-             transitionStyle : "backSlide"
             
+
         });
 
          /*-----------
@@ -70,14 +70,14 @@
         $(".dish-carousel, .review-carousel").owlCarousel({
               navigation : true, // Show next and prev buttons
               navigationText:	["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-             
+
               pagination: false,
               paginationSpeed : 400,
               singleItem:true,
-              autoPlay:true,
-              transitionStyle : "backSlide"
-          });
+              autoPlay:false,
         
+          });
+
         /*-----------
         sidebar widget slider carousel
         -----------*/
@@ -89,7 +89,7 @@
               singleItem:true,
               transitionStyle : "backSlide"
           });
-        
+
         /*-----------
         related post slider carousel
         -----------*/
@@ -98,7 +98,7 @@
             navigationText:	["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
             slideSpeed : 300,
             pagination: false,
-            items: 3, 
+            items: 3,
             //              singleItem:true,
             transitionStyle : "backSlide"
           });
@@ -119,9 +119,9 @@
 
 
         /*-----------
-            Fixednav scroll 
+            Fixednav scroll
             -----------*/
-        jQuery(window).on('scroll',function () { 
+        jQuery(window).on('scroll',function () {
             var vheight=$(window).height();
             var winwidth=$(window).width();
             if ($(window).scrollTop() > 0) {
@@ -133,7 +133,7 @@
         });
 
 
-        /*-------- 
+        /*--------
             Magnify Popup
             ---------*/
         if(jQuery('.popup-link').length){
@@ -142,7 +142,7 @@
                 gallery:{
                     enabled:true
                 }
-            }); 
+            });
         }
             if(jQuery('.iframe-popup-link').length){
             jQuery('.iframe-popup-link').magnificPopup({
@@ -150,16 +150,16 @@
                 gallery:{
                     enabled:true
                 }
-            }); 
+            });
         }
-        
+
         if(jQuery('.menu-item').length){
             jQuery('.menu-item').magnificPopup({
                 type: 'image',
                 gallery:{
                     enabled:true
                 }
-            }); 
+            });
         }
           /*--------
          $('.menu-item').magnificPopup({
@@ -177,9 +177,9 @@
   tNext: 'Next (Right arrow key)', // title for right button
   tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
 }
-  
+
 });
-    ----*/    
+    ----*/
 
         /*-------
         navbar search /Site search
@@ -210,14 +210,14 @@
             });
         });
 
-        /*********** 
+        /***********
          parallex pge banner]
         ************/
-       
+
         $(window).enllax();
 
         /*-------
-        Shuffle Grid gallery 
+        Shuffle Grid gallery
         -----------*/
 
         $(window).on('load',function(){
@@ -239,15 +239,15 @@
             });
         });
 
-    
+
         /*--------
         Video background js
         -----------*/
         if($('.video-background').length){
             $('.video-background').videobackground({
                 videoSource: [['assets/media/vid01.mp4', 'video/mp4'],
-                    ['assets/media/vid01.webm', 'video/webm'], 
-                    ['assets/media/vid01.ogv', 'video/ogg']], 
+                    ['assets/media/vid01.webm', 'video/webm'],
+                    ['assets/media/vid01.ogv', 'video/ogg']],
                 controlPosition: '#main',
                 loop: true,
 //					poster: 'assets/media/vid.jpg',
@@ -258,11 +258,11 @@
         }
 
 
-        
-        
-            
-        
-        
+
+
+
+
+
 
         /*--------
         Google map API
@@ -270,11 +270,11 @@
 
         if(jQuery('.map').length){
                 google.maps.event.addDomListener(window, 'load', init);
-        }	
+        }
 		function init() {
 		var myLatlng = new google.maps.LatLng(23.823824, 90.364351);//Add your Latitude longitude Value here to change map location
 		var maptooltipbold = 'ThemeEver';
-		var maptooltip = 'You can add your content here';  
+		var maptooltip = 'You can add your content here';
 		//---------------------------------------------------------//
 		var mapOptions = {
 		zoom: 17,
@@ -315,38 +315,9 @@
 			infowindow.open(map, marker);
 		});
 		}
-	
+
 
         //Google map end
-      
-    'use strict';
-    let swRegistration = null;
-     //serviceworker starts
-    if ('serviceWorker' in navigator && 'PushManager' in window) {
-      console.log('Service Worker and Push is supported');
-      navigator.serviceWorker.register('service-worjs')
-      .then(function(swReg) {
-        console.log('Service Worker is registered', swReg);
-        swRegistration = swReg;
-      })
-      .catch(function(error) {
-        console.error('Service Worker Error', error);
-      });
-    } else {
-    console.warn('Push messaging is not supported');
-    pushButton.textContent = 'Push Not Supported';
-    }
-   
-      
-        
     });
-    
+
 })(jQuery);
-
-  
-        
-
-
-	
-	
-	
