@@ -4021,3 +4021,7 @@ responsive
     justify-content: center;
     flex-direction: column;
 }
+.notification > a{
+    padding: 5px 0px 10px 0px;
+}
+
