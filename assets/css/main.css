@@ -1,19 +1,11 @@
-/*------------------------------------------------------------------
-[Master Stylesheet]
-
-Project:    Rosui Ghor
-Version:    1.0
-Last change:    15.11.16
-Primary use:    Restaurant theme  
--------------------------------------------------------------------*/
-/* Social color */
-
-body {
+ body {
+    -webkit-font-smoothing: antialiased;
     color: #6f6f6f;
     font-size: 13px;
     font-family: "Open Sans", sans-serif;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+ 
+    
 }
 
 .flex-vertical{
@@ -1508,9 +1500,7 @@ img {
     .navbar-default {
         padding: 5px 0px 0px;
     }
-    .main-nav ul {
-        /*display: block;*/
-    }
+    
     .navbar-default {
         background: #121212;
     }
@@ -1552,7 +1542,7 @@ img {
     /* new added end */
     
     .main-nav li.dropdown.open li.dropdown ul.dropdown-menu {
-        /*display: block;*/
+        font-family: inherit;
     }
     .navbar-nav .open .dropdown-menu {
         position: static;
@@ -1630,11 +1620,15 @@ img {
 }
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 @media only screen and (max-width: 1400px) {
     .para1 {
